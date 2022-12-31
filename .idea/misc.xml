@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_item_detail.xml" value="0.136" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_item_kandang.xml" value="0.136" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_kind_farmer.xml" value="0.193" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_splash_screen.xml" value="0.136" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_type_farmer.xml" value="0.1" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_type_farmer_unactive.xml" value="0.1" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_type_n_period.xml" value="0.193" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_age.xml" value="0.1485" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_body_weight.xml" value="0.193" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.137" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_more_vert.xml" value="0.1485" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/activity_main.xml" value="0.1265625" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/item_kandang_layout.xml" value="0.264" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/type_n_period.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/type_n_period_layout.xml" value="0.2604166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

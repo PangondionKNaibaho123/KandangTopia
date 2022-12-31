@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KandangTopia</string>
+    <string name="dummy_name_kandang">Kandang Bangkit</string>
+    <string name="dummy_name_kota">Kota Jakarta Utara</string>
+    <string name="dummy_amount">X</string>
+    <string name="hari">Hari</string>
+    <string name="ekor">Ekor</string>
+    <string name="gram">Gram</string>
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:layout_marginVertical="15dp"
+    android:paddingHorizontal="16dp"
+    android:background="@drawable/bg_item_kandang"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="8dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/ivItemkandang"
+                android:layout_width="297dp"
+                android:layout_height="152dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/active_bg" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvNameKandang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/frItem"
+        app:layout_constraintTop_toBottomOf="@+id/frItem"
+        android:textColor="@color/green_item_name"
+        android:fontFamily="@font/airbnbcerealbold"
+        android:textSize="18sp"
+        android:text="@string/dummy_name_kandang"/>
+
+    <ImageView
+        android:id="@+id/icOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_vert"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNameKandang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvNameKandang" />
+
+    <TextView
+        android:id="@+id/tvKota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_name_kota"
+        android:textSize="12sp"
+        android:textColor="@color/color_farmer_type2"
+        android:fontFamily="@font/airbnbcereallight"
+        app:layout_constraintStart_toStartOf="@+id/tvNameKandang"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameKandang"/>
+
+    <ImageView
+        android:id="@+id/icAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvKota"
+        app:layout_constraintTop_toBottomOf="@+id/tvKota"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_age"/>
+
+    <TextView
+        android:id="@+id/tv_amountAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/airbnbcerealbold"
+        android:textColor="@color/color_farmer_type2"
+        app:layout_constraintStart_toEndOf="@+id/icAge"
+        app:layout_constraintTop_toBottomOf="@+id/tvKota"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/dummy_amount"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/airbnbcereallight"
+        android:textStyle="bold"
+        android:text="@string/hari"
+        android:textColor="@color/color_farmer_type2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icAge"
+        app:layout_constraintStart_toEndOf="@+id/icAge"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amountAge"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/icPopulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_amountAge"
+        app:layout_constraintBottom_toBottomOf="@+id/icAge"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="27dp"
+        android:src="@drawable/ic_population"/>
+
+    <TextView
+        android:id="@+id/tv_amountPopulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/airbnbcerealbold"
+        android:textColor="@color/color_farmer_type2"
+        app:layout_constraintStart_toEndOf="@+id/icPopulation"
+        app:layout_constraintTop_toBottomOf="@+id/tvKota"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/dummy_amount"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/airbnbcereallight"
+        android:textStyle="bold"
+        android:text="@string/ekor"
+        android:textColor="@color/color_farmer_type2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icPopulation"
+        app:layout_constraintStart_toEndOf="@+id/icPopulation"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amountPopulation"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/icWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_body_weight"
+        android:layout_marginStart="27dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_amountPopulation"
+        app:layout_constraintBottom_toBottomOf="@+id/icPopulation" />
+
+    <TextView
+        android:id="@+id/tv_amountWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/airbnbcerealbold"
+        android:textColor="@color/color_farmer_type2"
+        app:layout_constraintStart_toEndOf="@+id/icWeight"
+        app:layout_constraintTop_toBottomOf="@+id/tvKota"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/dummy_amount"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/airbnbcereallight"
+        android:text="@string/gram"
+        android:textColor="@color/color_farmer_type2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icWeight"
+        app:layout_constraintStart_toEndOf="@+id/icWeight"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amountWeight"
+        tools:ignore="MissingConstraints" />
+
+    <com.example.kandangtopia.view.advanced_ui.TypenPeriodLayout
+        android:id="@+id/tnplItem"
+        android:layout_width="62dp"
+        android:layout_height="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
