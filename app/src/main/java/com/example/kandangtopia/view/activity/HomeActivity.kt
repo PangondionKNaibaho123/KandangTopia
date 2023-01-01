@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
@@ -33,6 +34,8 @@ class HomeActivity : AppCompatActivity() {
     private var _listKandangRehat: ArrayList<Kandang> = ArrayList()
 
     private lateinit var viewPagerAdapter: ViewPagerAdapter
+
+    private var onFailMessage: String = ""
 
     companion object{
         fun newIntent(context: Context): Intent = Intent(context, HomeActivity::class.java)
@@ -124,6 +127,9 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun callFromVM(){
+        homeViewModel.isLoading.observe(this, {
+            showLoading(it)
+        })
         homeViewModel.getListKandangAktif()
         homeViewModel.getListKandangRehat()
         homeViewModel.listKandangAktif.observe(this, {listKandangAktif ->
@@ -131,7 +137,30 @@ class HomeActivity : AppCompatActivity() {
                 setUpViewPager(listKandangAktif, listKandangRehat)
             })
         })
+        homeViewModel.isFail.observe(this, {
+            setUpWarning(it)
+        })
+        homeViewModel.messageData.observe(this, {
+            setOnFailMessage(it)
+        })
+    }
 
+    private fun setOnFailMessage(message: String){
+        onFailMessage = message
+    }
+
+    private fun getOnFailMessage(): String{
+        return onFailMessage
+    }
+
+    private fun showLoading(isLoading: Boolean){
+        binding.pbHome.visibility = if(isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun setUpWarning(isFail: Boolean){
+        if(isFail){
+            Toast.makeText(this@HomeActivity, "${getOnFailMessage()}", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setUpAddButton(){

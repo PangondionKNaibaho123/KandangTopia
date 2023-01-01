@@ -23,14 +23,25 @@ class HomeViewModel constructor(private val getKandangUseCase: GetKandangUseCase
     private var _messageData = MutableLiveData<String>()
     val messageData : LiveData<String> = _messageData
 
+    private var _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
+
+    private var _isFail = MutableLiveData<Boolean>()
+    val isFail: LiveData<Boolean> = _isFail
+
     fun getListKandangAktif(){
+        _isLoading.value = true
         getKandangUseCase.invokeKAktif(viewModelScope, null, object:UseCaseResponse<List<Kandang>>{
             override fun onSuccess(result: List<Kandang>) {
+                _isLoading.value = false
+                _isFail.value = false
                 Log.d(TAG, "result: $result")
                 _listKandangAktif.value = result
             }
 
             override fun onError(apiError: ApiError?) {
+                _isLoading.value = false
+                _isFail.value = true
                 _messageData.value = apiError?.getErrorMessage()
             }
 
@@ -38,13 +49,18 @@ class HomeViewModel constructor(private val getKandangUseCase: GetKandangUseCase
     }
 
     fun getListKandangRehat(){
+        _isLoading.value = true
         getKandangUseCase.invokeKRehat(viewModelScope, null, object:UseCaseResponse<List<Kandang>>{
             override fun onSuccess(result: List<Kandang>) {
+                _isLoading.value = false
+                _isFail.value = false
                 Log.d(TAG, "result: $result")
                 _listKandangRehat.value = result
             }
 
             override fun onError(apiError: ApiError?) {
+                _isLoading.value = false
+                _isFail.value = true
                 _messageData.value = apiError?.getErrorMessage()
             }
 

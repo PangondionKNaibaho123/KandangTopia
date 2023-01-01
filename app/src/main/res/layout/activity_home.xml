@@ -55,6 +55,18 @@
 
     </RelativeLayout>
 
+    <ProgressBar
+        android:id="@+id/pbHome"
+        android:indeterminateTint="@color/green_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ivAddItem"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
 
     <ImageView
         android:id="@+id/ivAddItem"
