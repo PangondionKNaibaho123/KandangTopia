@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="14dp"
+    android:background="@drawable/bg_actionbar_detail">
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/ic_arrow_back"/>
+
+    <ImageView
+        android:id="@+id/ic_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_back"
+        android:src="@drawable/ic_more_vert_horizontal_white"
+        android:layout_marginEnd="11dp"/>
+
+    <TextView
+        android:id="@+id/tvNamaKandang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="@+id/ic_back"
+        app:layout_constraintTop_toBottomOf="@+id/ic_back"
+        android:layout_marginStart="3dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/airbnbcerealextrabold"
+        android:text="@string/dummy_nama_kandang"/>
+
+    <TextView
+        android:id="@+id/tvTitleTypeKandang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/ic_option"
+        app:layout_constraintTop_toTopOf="@+id/tvNamaKandang"
+        app:layout_constraintTop_toBottomOf="@+id/ic_option"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="@font/airbnbcereallight"
+        android:text="@string/title_type_kandang"/>
+
+    <TextView
+        android:id="@+id/tvNamaTypeKandang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/ic_option"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleTypeKandang"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNamaKandang"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:fontFamily="@font/airbnbcerealmedium"
+        android:text="@string/dummy_type_kandang"/>
+
+
+    <TextView
+        android:id="@+id/tvNamaKota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tvNamaKandang"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaKandang"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="@font/airbnbcereallight"
+        android:text="@string/dummy_nama_kota"/>
+
+    <TextView
+        android:id="@+id/tvTitletanggaldoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/ic_option"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaKota"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="@font/airbnbcereallight"
+        android:text="@string/title_tanggal_doc"/>
+
+    <TextView
+        android:id="@+id/tvTanggaldoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/ic_option"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitletanggaldoc"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPeriodenUmur"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:fontFamily="@font/airbnbcerealmedium"
+        android:text="@string/dummy_tanggal_doc"/>
+
+    <TextView
+        android:id="@+id/tvPeriodenUmur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvNamaKota"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaKota"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/airbnbcerealmedium"
+        android:text="@string/dummy_periodenumur"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

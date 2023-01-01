@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_actionbar_detail.xml" value="0.141" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_green.xml" value="0.1865" />
-        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_item_detail.xml" value="0.136" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_item_detail.xml" value="0.6" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_item_kandang.xml" value="0.136" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_kind_farmer.xml" value="0.193" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/bg_search_bar.xml" value="0.1545" />
@@ -20,10 +21,12 @@
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_clear.xml" value="0.1545" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.137" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_more_vert.xml" value="0.1485" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/drawable/ic_more_vert_white.xml" value="0.141" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/activity_detail.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/activity_main.xml" value="0.1265625" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/detail_actionbar.xml" value="0.264" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/double_button_layout.xml" value="0.2734375" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/fragment_kandang_aktif.xml" value="0.3802163833075734" />
         <entry key="..\:/Users/dionk/AndroidStudioProjects/KandangTopia/app/src/main/res/layout/item_kandang_layout.xml" value="0.264" />

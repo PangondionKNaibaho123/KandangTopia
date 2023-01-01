@@ -8,6 +8,7 @@ import android.util.Log
 import com.example.kandangtopia.R
 import com.example.kandangtopia.databinding.ActivityDetailBinding
 import com.example.kandangtopia.model.Kandang
+import com.example.kandangtopia.view.advanced_ui.DetailActionBar
 
 class DetailActivity : AppCompatActivity() {
     private val TAG = DetailActivity::class.java.simpleName
@@ -28,7 +29,17 @@ class DetailActivity : AppCompatActivity() {
 
         deliveredKandang = intent.getParcelableExtra(DELIVERED_KANDANG)!!
         Log.d(TAG, "deliveredKandang: $deliveredKandang")
+
+        setUpActionBar()
     }
 
+    private fun setUpActionBar(){
+        binding.dabDetail.setDataKandang(deliveredKandang)
+        binding.dabDetail.setListener(object : DetailActionBar.ActionBarListener{
+            override fun onBackClick() {
+                finish()
+            }
+        })
+    }
 
 }

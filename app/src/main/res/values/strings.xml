@@ -12,4 +12,11 @@
     <string name="amount_list_aktif">Kamu memiliki <b>%d kandang aktif</b></string>
     <string name="amount_list_rehat">Kamu memiliki <b>%d kandang rehat</b></string>
     <string name="dummy_amount_list">Kamu memiliki <b>X kandang aktif</b></string>
+    <string name="dummy_nama_kandang">Kandang X</string>
+    <string name="dummy_nama_kota">Kota X</string>
+    <string name="dummy_periodenumur">Periode X | Umur X</string>
+    <string name="title_type_kandang">Jenis Kandang</string>
+    <string name="dummy_type_kandang">Type X</string>
+    <string name="title_tanggal_doc">Tanggal DOC in</string>
+    <string name="dummy_tanggal_doc">20 Des 2021</string>
 </resources>
