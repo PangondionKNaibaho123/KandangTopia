@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kandangtopia.R
 import com.example.kandangtopia.databinding.FragmentKandangBinding
 import com.example.kandangtopia.model.Kandang
+import com.example.kandangtopia.view.activity.DetailActivity
 import com.example.kandangtopia.view.adapter.ItemKandangAdapter
 
 class KandangRehatFragment: Fragment(){
@@ -58,12 +59,7 @@ class KandangRehatFragment: Fragment(){
         binding.rvListKandang.layoutManager = LinearLayoutManager(this@KandangRehatFragment.requireActivity())
         binding.rvListKandang.setHasFixedSize(true)
 
-        val adapter = ItemKandangAdapter(listKandang, object: ItemKandangAdapter.onItemClickCallback{
-            override fun onSelectedItem(item: Kandang) {
-                Toast.makeText(this@KandangRehatFragment.requireActivity(), "Implemented Soon", Toast.LENGTH_SHORT).show()
-            }
-
-        })
+        val adapter = ItemKandangAdapter(listKandang, object: ItemKandangAdapter.onItemClickCallback{})
 
         binding.rvListKandang.adapter = adapter
     }

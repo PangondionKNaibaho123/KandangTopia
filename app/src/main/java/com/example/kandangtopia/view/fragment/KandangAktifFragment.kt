@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kandangtopia.R
 import com.example.kandangtopia.databinding.FragmentKandangBinding
 import com.example.kandangtopia.model.Kandang
+import com.example.kandangtopia.view.activity.DetailActivity
 import com.example.kandangtopia.view.adapter.ItemKandangAdapter
 
 class KandangAktifFragment:Fragment() {
@@ -68,7 +69,9 @@ class KandangAktifFragment:Fragment() {
 
         val adapter = ItemKandangAdapter(listKandang, object: ItemKandangAdapter.onItemClickCallback{
             override fun onSelectedItem(item: Kandang) {
-                Toast.makeText(this@KandangAktifFragment.requireContext(), "Implemented Soon", Toast.LENGTH_SHORT).show()
+                startActivity(
+                    DetailActivity.newIntent(this@KandangAktifFragment.requireActivity(), item)
+                )
             }
 
         })

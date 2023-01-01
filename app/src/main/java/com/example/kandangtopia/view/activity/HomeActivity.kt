@@ -101,7 +101,7 @@ class HomeActivity : AppCompatActivity() {
         binding.vpFragmentKandang.addOnPageChangeListener(onPageChangeListener)
     }
 
-    val onPageChangeListener = object: ViewPager.OnPageChangeListener{
+    private val onPageChangeListener = object: ViewPager.OnPageChangeListener{
         override fun onPageScrolled(
             position: Int,
             positionOffset: Float,

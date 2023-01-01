@@ -72,6 +72,6 @@ class ItemKandangAdapter(
     override fun getItemCount(): Int = data.size
 
     interface onItemClickCallback{
-        fun onSelectedItem(item: Kandang)
+        fun onSelectedItem(item: Kandang){}
     }
 }
