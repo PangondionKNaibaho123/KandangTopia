@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">KandangTopia</string>
     <string name="dummy_name_kandang">Kandang Bangkit</string>
     <string name="dummy_name_kota">Kota Jakarta Utara</string>
@@ -6,4 +6,10 @@
     <string name="hari">Hari</string>
     <string name="ekor">Ekor</string>
     <string name="gram">Gram</string>
+    <string name="option_aktif">Aktif</string>
+    <string name="option_rehat">Rehat</string>
+    <string name="searchbar_helper">Cari</string>
+    <string name="amount_list_aktif">Kamu memiliki <b>%d kandang aktif</b></string>
+    <string name="amount_list_rehat">Kamu memiliki <b>%d kandang rehat</b></string>
+    <string name="dummy_amount_list">Kamu memiliki <b>X kandang aktif</b></string>
 </resources>

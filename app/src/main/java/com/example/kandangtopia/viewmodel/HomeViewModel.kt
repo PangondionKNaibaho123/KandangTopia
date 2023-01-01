@@ -17,6 +17,9 @@ class HomeViewModel constructor(private val getKandangUseCase: GetKandangUseCase
     private var _listKandangAktif = MutableLiveData<List<Kandang>>()
     val listKandangAktif : LiveData<List<Kandang>> = _listKandangAktif
 
+    private var _listKandangRehat = MutableLiveData<List<Kandang>>()
+    val listKandangRehat: LiveData<List<Kandang>> = _listKandangRehat
+
     private var _messageData = MutableLiveData<String>()
     val messageData : LiveData<String> = _messageData
 
@@ -25,6 +28,20 @@ class HomeViewModel constructor(private val getKandangUseCase: GetKandangUseCase
             override fun onSuccess(result: List<Kandang>) {
                 Log.d(TAG, "result: $result")
                 _listKandangAktif.value = result
+            }
+
+            override fun onError(apiError: ApiError?) {
+                _messageData.value = apiError?.getErrorMessage()
+            }
+
+        })
+    }
+
+    fun getListKandangRehat(){
+        getKandangUseCase.invokeKRehat(viewModelScope, null, object:UseCaseResponse<List<Kandang>>{
+            override fun onSuccess(result: List<Kandang>) {
+                Log.d(TAG, "result: $result")
+                _listKandangRehat.value = result
             }
 
             override fun onError(apiError: ApiError?) {

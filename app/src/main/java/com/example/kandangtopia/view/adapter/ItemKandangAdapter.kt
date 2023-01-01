@@ -27,18 +27,33 @@ class ItemKandangAdapter(
 
             when(item.status_aktif){
                 true ->{
-                    Glide.with(itemView.context)
-                        .load(R.drawable.active_bg)
-                        .into(binding.ivItemkandang)
+                    with(binding){
+                        Glide.with(itemView.context)
+                            .load(R.drawable.active_bg)
+                            .into(ivItemkandang)
 
-                    binding.root.setOnClickListener {
-                        itemClickCallback.onSelectedItem(item)
+                        root.setOnClickListener {
+                            itemClickCallback.onSelectedItem(item)
+                        }
+
                     }
                 }
                 else ->{
-                    Glide.with(itemView.context)
-                        .load(R.drawable.nonactive_bg)
-                        .into(binding.ivItemkandang)
+                    with(binding){
+                        Glide.with(itemView.context)
+                            .load(R.drawable.nonactive_bg)
+                            .into(ivItemkandang)
+
+                        icAge.visibility = View.GONE
+                        icWeight.visibility = View.GONE
+                        icPopulation.visibility = View.GONE
+                        tvUnitAge.visibility = View.GONE
+                        tvUnitPopulation.visibility = View.GONE
+                        tvUnitWeight.visibility = View.GONE
+                        tvAmountWeight.visibility = View.GONE
+                        tvAmountPopulation.visibility = View.GONE
+                        tvAmountAge.visibility = View.GONE
+                    }
                 }
             }
 

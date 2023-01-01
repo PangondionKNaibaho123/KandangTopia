@@ -4,15 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".view.activity.HomeActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvKandangAktif"
+    <TextView
+        android:id="@+id/ivTitleKandang"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Kandang"
+        android:textSize="24sp"
+        android:textColor="@color/black2"
+        android:fontFamily="@font/airbnbcerealextrabold"/>
+
+    <com.example.kandangtopia.view.advanced_ui.SearchBarView
+        android:id="@+id/sbvHome"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTitleKandang"
+        android:layout_marginTop="20dp"/>
+
+    <com.example.kandangtopia.view.advanced_ui.DoubleButtonView
+        android:id="@+id/dbvHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/sbvHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sbvHome"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpFragmentKandang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/sbvHome"/>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rvKandangAktif"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/sbvHome"-->
+<!--        android:layout_marginTop="20dp"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

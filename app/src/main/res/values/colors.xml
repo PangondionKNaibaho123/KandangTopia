@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white2">#F5F5F5F5</color>
+    <color name="grey">#BBBBBBBB</color>
+    <color name="grey2">#DE333333</color>
+    <color name="black2">#FF333333</color>
     <color name="white_transparent">#D9FFFFFF</color>
     <color name="color_farmer_type1">#85C226</color>
     <color name="color_farmer_type2">#555555</color>
