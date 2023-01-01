@@ -46,6 +46,7 @@ class HomeActivity : AppCompatActivity() {
         callFromVM()
         setUpSearchBar()
         setUpDoubleButton()
+        setUpAddButton()
     }
 
     private fun setUpSearchBar(){
@@ -96,6 +97,30 @@ class HomeActivity : AppCompatActivity() {
         viewPagerAdapter.addFragment(fragmentKandangRehat)
 
         binding.vpFragmentKandang.adapter = viewPagerAdapter
+
+        binding.vpFragmentKandang.addOnPageChangeListener(onPageChangeListener)
+    }
+
+    val onPageChangeListener = object: ViewPager.OnPageChangeListener{
+        override fun onPageScrolled(
+            position: Int,
+            positionOffset: Float,
+            positionOffsetPixels: Int
+        ) {}
+
+        override fun onPageSelected(position: Int) {
+            when(position){
+                0 ->{
+                    binding.dbvHome.updateType(DoubleButtonView.TYPE.AKTIF)
+                }
+                1 ->{
+                    binding.dbvHome.updateType(DoubleButtonView.TYPE.REHAT)
+                }
+            }
+        }
+
+        override fun onPageScrollStateChanged(state: Int) {}
+
     }
 
     private fun callFromVM(){
@@ -107,8 +132,12 @@ class HomeActivity : AppCompatActivity() {
             })
         })
 
+    }
 
-
+    private fun setUpAddButton(){
+        binding.ivAddItem.setOnClickListener {
+            Toast.makeText(this@HomeActivity, "Add Item Implemented Soon", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }

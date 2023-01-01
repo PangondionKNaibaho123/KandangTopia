@@ -52,6 +52,9 @@ class KandangRehatFragment: Fragment(){
     }
 
     private fun setUpRV(listKandang: List<Kandang>){
+        val textAmountList = String.format(getString(R.string.amount_list_rehat), listKandang.size)
+        binding.tvAmountList.text = textAmountList
+
         binding.rvListKandang.layoutManager = LinearLayoutManager(this@KandangRehatFragment.requireActivity())
         binding.rvListKandang.setHasFixedSize(true)
 

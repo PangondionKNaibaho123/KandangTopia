@@ -60,6 +60,9 @@ class KandangAktifFragment:Fragment() {
     }
 
     private fun setUpRV(listKandang: List<Kandang>){
+        val textAmountList = String.format(getString(R.string.amount_list_aktif), listKandang.size)
+        binding.tvAmountList.text = textAmountList
+
         binding.rvListKandang.layoutManager = LinearLayoutManager(this@KandangAktifFragment.requireContext())
         binding.rvListKandang.setHasFixedSize(true)
 
