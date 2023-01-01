@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white2"
     tools:context=".view.activity.DetailActivity">
 
     <com.example.kandangtopia.view.advanced_ui.DetailActionBar
@@ -11,5 +12,740 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dab_Detail"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="23dp"
+                android:background="@drawable/bg_item_kandang">
+
+                <TextView
+                    android:id="@+id/performaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="14sp"
+                    android:textColor="@color/green_item_name"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textStyle="bold"
+                    android:text="@string/performa_title"/>
+
+                <TextView
+                    android:id="@+id/tv_ipTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/performaTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/performaTitle"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/ip_title"/>
+
+                <TextView
+                    android:id="@+id/tv_fcrTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:text="@string/fcr_title"
+                    android:textColor="@color/black2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_ipTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_ipTitle" />
+
+                <TextView
+                    android:id="@+id/tv_ipValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ipTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_ipTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/ip_value"/>
+
+                <TextView
+                    android:id="@+id/tv_fcrValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_fcrTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_ipValue"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/fcr_value"/>
+
+                <TextView
+                    android:id="@+id/tv_adgTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ipValue"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ipValue"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/adg_title"/>
+
+                <TextView
+                    android:id="@+id/tv_deplesiTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_fcrValue"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_adgTitle"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/deplesi_title"/>
+
+                <TextView
+                    android:id="@+id/tv_adgValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/tv_adgTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_adgTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/adg_value"/>
+
+                <TextView
+                    android:id="@+id/tv_adgUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_adgValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_adgValue"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/unit_gr_hari"/>
+
+                <TextView
+                    android:id="@+id/tv_deplesiValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/tv_deplesiTitle"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_adgValue"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/deplesi_value"/>
+
+                <TextView
+                    android:id="@+id/tv_bKandangTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_adgValue"
+                    app:layout_constraintTop_toBottomOf="@id/tv_adgValue"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/bkandang_title"/>
+
+                <TextView
+                    android:id="@+id/tv_bRerataTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_deplesiValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_bKandangTitle"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/brerata_title"/>
+
+                <TextView
+                    android:id="@+id/tv_bKandangValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/tv_bKandangTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tv_bKandangTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/bkandang_value"/>
+
+                <TextView
+                    android:id="@+id/tv_bKandangUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_bKandangValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_bKandangValue"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/unit_gr"/>
+
+                <TextView
+                    android:id="@+id/tv_bRerataValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_bRerataTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_bKandangValue"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/brerata_value"/>
+
+                <TextView
+                    android:id="@+id/tv_bRerataUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_bRerataValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_bRerataValue"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/unit_gr"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl1"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="23dp"
+                android:background="@drawable/bg_item_kandang">
+
+                <TextView
+                    android:id="@+id/tv_KandangTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="14sp"
+                    android:textColor="@color/green_item_name"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textStyle="bold"
+                    android:text="@string/kandang_title"/>
+
+                <TextView
+                    android:id="@+id/tv_sdhTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_KandangTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_KandangTitle"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/sdh_title"/>
+
+                <TextView
+                    android:id="@+id/tv_sdhValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_sdhTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_sdhTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/sdh_value"/>
+
+                <TextView
+                    android:id="@+id/tv_tmTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/tv_sdhValue"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_sdhValue"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/tm_title"/>
+
+                <TextView
+                    android:id="@+id/tv_tciTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tmTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_tmTitle"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/tci_title"/>
+
+                <TextView
+                    android:id="@+id/tv_tmValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/tv_tmTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tmTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/tm_value"/>
+
+                <TextView
+                    android:id="@+id/tv_tciValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_tciTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_tmValue"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/tci_value"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl2"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="23dp"
+                android:background="@drawable/bg_item_kandang">
+
+                <TextView
+                    android:id="@+id/tv_AyamTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="14sp"
+                    android:textColor="@color/green_item_name"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textStyle="bold"
+                    android:text="@string/ayam_title"/>
+
+                <TextView
+                    android:id="@+id/tv_nDOCTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_AyamTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_AyamTitle"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/ndoc_title"/>
+
+                <TextView
+                    android:id="@+id/tv_nDOCValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_nDOCTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nDOCTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/ndoc_value"/>
+
+                <TextView
+                    android:id="@+id/tv_DOCmTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_nDOCValue"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nDOCValue"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/docm_title"/>
+
+                <TextView
+                    android:id="@+id/tv_baDOCTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_DOCmTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_DOCmTitle"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/badoc_title"/>
+
+                <TextView
+                    android:id="@+id/tv_DOCmValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_DOCmTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_DOCmTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/docm_value"/>
+
+                <TextView
+                    android:id="@+id/tv_DOCmUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_DOCmValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_DOCmValue"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/unit_ekor"/>
+
+                <TextView
+                    android:id="@+id/tv_baDOCValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_baDOCTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_DOCmValue"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/badoc_value"/>
+
+                <TextView
+                    android:id="@+id/tv_baDOCmUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_baDOCValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_baDOCValue"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/unit_ekor"/>
+
+                <TextView
+                    android:id="@+id/tv_ATTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_DOCmValue"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_DOCmValue"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/at_title"/>
+
+                <TextView
+                    android:id="@+id/tv_ATValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ATTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_ATTitle"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/at_value"/>
+
+                <TextView
+                    android:id="@+id/tv_ATUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_ATValue"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_ATValue"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/unit_ekor"/>
+
+                <TextView
+                    android:id="@+id/tv_deplesi2Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_baDOCTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_ATTitle"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/deplesi_title"/>
+
+                <TextView
+                    android:id="@+id/tv_deplesi2Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_deplesi2Title"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_ATValue"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/airbnbcerealmedium"
+                    android:textSize="20sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/deplesi2_value"/>
+
+                <TextView
+                    android:id="@+id/tv_deplesi2Unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/tv_deplesi2Value"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_deplesi2Value"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/airbnbcereallight"
+                    android:textSize="14sp"
+                    android:textColor="@color/black2"
+                    android:text="@string/unit_ekor"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl3"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="23dp"
+            android:background="@drawable/bg_item_kandang">
+
+            <TextView
+                android:id="@+id/tv_PakanTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="14sp"
+                android:textColor="@color/green_item_name"
+                android:fontFamily="@font/airbnbcerealmedium"
+                android:textStyle="bold"
+                android:text="@string/pakan_title"/>
+
+            <TextView
+                android:id="@+id/tv_PMTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_PakanTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_PakanTitle"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/pm_title"/>
+
+            <TextView
+                android:id="@+id/tv_PMValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_PMTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_PMTitle"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/airbnbcerealmedium"
+                android:textSize="20sp"
+                android:textColor="@color/black2"
+                android:text="@string/pm_value"/>
+
+            <TextView
+                android:id="@+id/tv_PMUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_PMValue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_PMValue"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/unit_kg"/>
+
+            <TextView
+                android:id="@+id/tv_PKTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_PMTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_PMTitle"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/pk_title"/>
+
+            <TextView
+                android:id="@+id/tv_PKValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_PKTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_PMValue"
+                android:fontFamily="@font/airbnbcerealmedium"
+                android:textSize="20sp"
+                android:textColor="@color/black2"
+                android:text="@string/pk_value"/>
+
+            <TextView
+                android:id="@+id/tv_PKUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_PKValue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_PKValue"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/unit_kg"/>
+
+            <TextView
+                android:id="@+id/tv_PPTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_PMValue"
+                app:layout_constraintTop_toBottomOf="@+id/tv_PMValue"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/pp_title"/>
+
+            <TextView
+                android:id="@+id/tv_PPValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_PPTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_PPTitle"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/airbnbcerealmedium"
+                android:textSize="20sp"
+                android:textColor="@color/black2"
+                android:text="@string/pp_value"/>
+
+            <TextView
+                android:id="@+id/tv_PPUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_PPValue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_PPValue"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/unit_kg"/>
+
+            <TextView
+                android:id="@+id/tv_SPTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_PPTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_PPTitle"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/sp_title"/>
+
+            <TextView
+                android:id="@+id/tv_SPValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_SPTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_PPValue"
+                android:fontFamily="@font/airbnbcerealmedium"
+                android:textSize="20sp"
+                android:textColor="@color/black2"
+                android:text="@string/sp_value"/>
+
+            <TextView
+                android:id="@+id/tv_SPUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_SPValue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_SPValue"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/unit_kg"/>
+
+            <TextView
+                android:id="@+id/tv_KPPETitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_PPValue"
+                app:layout_constraintTop_toBottomOf="@+id/tv_PPValue"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/kppe_title"/>
+
+            <TextView
+                android:id="@+id/tv_KPPEValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_KPPETitle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_KPPETitle"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/airbnbcerealmedium"
+                android:textSize="20sp"
+                android:textColor="@color/black2"
+                android:text="@string/kppe_value"/>
+
+            <TextView
+                android:id="@+id/tv_KPPEUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_KPPEValue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_KPPEValue"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/unit_kg"/>
+
+            <TextView
+                android:id="@+id/tv_EPTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_SPValue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_KPPETitle"
+                android:fontFamily="@font/airbnbcereallight"
+                android:textSize="14sp"
+                android:textColor="@color/black2"
+                android:text="@string/ep_title"/>
+
+            <TextView
+                android:id="@+id/tv_EPValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_EPTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_KPPEValue"
+                android:fontFamily="@font/airbnbcerealmedium"
+                android:textSize="20sp"
+                android:textColor="@color/black2"
+                android:text="@string/ep_value"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

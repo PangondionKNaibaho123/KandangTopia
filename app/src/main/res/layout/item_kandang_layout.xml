@@ -4,7 +4,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingTop="16dp"
-    android:layout_marginVertical="15dp"
+    android:paddingBottom="19dp"
+    android:layout_marginVertical="10dp"
     android:paddingHorizontal="16dp"
     android:background="@drawable/bg_item_kandang"
     xmlns:app="http://schemas.android.com/apk/res-auto">

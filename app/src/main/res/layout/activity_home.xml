@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
     tools:context=".view.activity.HomeActivity">
 
     <TextView
@@ -14,6 +13,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="Kandang"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:textSize="24sp"
         android:textColor="@color/black2"
         android:fontFamily="@font/airbnbcerealextrabold"/>
@@ -22,7 +23,7 @@
         android:id="@+id/sbvHome"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ivTitleKandang"
         app:layout_constraintTop_toBottomOf="@+id/ivTitleKandang"
         android:layout_marginTop="20dp"/>
 
@@ -35,19 +36,20 @@
         app:layout_constraintTop_toTopOf="@+id/sbvHome"/>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white2"
         app:layout_constraintTop_toBottomOf="@+id/dbvHome">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vpFragmentKandang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sbvHome"
             tools:ignore="NotSibling" />
 
